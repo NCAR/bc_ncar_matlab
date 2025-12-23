@@ -8,7 +8,6 @@ form:
   - bc_num_hours
   - bc_num_slots
   - num_cores
-  - node_type
   - bc_vnc_resolution
   - bc_email_on_started
 attributes:
@@ -29,7 +28,7 @@ attributes:
       - "<%= queue.strip %>"
       <%- end %>
   auto_modules_matlab:
-    default: false
+    default: true
   num_cores:
     widget: "number_field"
     label: "Number of cores"
