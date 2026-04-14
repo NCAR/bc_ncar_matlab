@@ -1,7 +1,6 @@
 ---
 cluster:
   - "casper"
-  - "derecho"
 form:
   - account
   - queue
@@ -23,12 +22,6 @@ attributes:
          data-option-for-cluster-derecho: false
          ]
     <%- end %>
-      <%- CustomAccounts.accounts["de"].each do |account| %>
-       - [
-         "<%= account.strip %>", "<%= account.strip %>",
-         data-option-for-cluster-casper: false
-         ]
-    <%- end %>
   queue:
     widget: select
     label: "Cluster queue"
@@ -37,10 +30,6 @@ attributes:
       <%- CustomQueues.queues["cr"].each do |queue| %>
       - [ "<%= queue.strip %>", "<%= queue.strip %>",
           data-exclusive-option-for-cluster-casper: true ]
-    <%- end %>
-      <%- CustomQueues.queues["de"].each do |queue| %>
-      - [ "<%= queue.strip %>", "<%= queue.strip %>",
-          data-exclusive-option-for-cluster-derecho: true ]
     <%- end %>
   auto_modules_matlab:
     default: true
